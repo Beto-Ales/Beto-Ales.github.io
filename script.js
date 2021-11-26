@@ -102,20 +102,20 @@ const searchAndSocialContainer = document.querySelector('.searchList');
 
 const li = document.querySelector('.fadeOut');
 
-const dropdownItem = document.querySelector('.gotoArticle');
+// const dropdownItem = document.querySelector('.gotoArticle');
 
-dropdownItem.addEventListener('click', ()=>{
-  if (mobile) {
-    console.log(mobile);
-    searchIcon.classList.toggle('searchIconRotate');
-    baristaLogo.classList.toggle('hiddenElement');
-    burgerMenu.classList.toggle('hiddenElement');
-    li.classList.toggle('fadeIn');
-    bodyNoScroll.classList.toggle('noScroll');
-  }
-    searchAndSocialContainer.classList.toggle('searchOffcanvasShow');
-  // li.classList.toggle('fadeIn');
-});
+// dropdownItem.addEventListener('click', ()=>{
+//   if (mobile) {
+//     console.log(mobile);
+//     searchIcon.classList.toggle('searchIconRotate');
+//     baristaLogo.classList.toggle('hiddenElement');
+//     burgerMenu.classList.toggle('hiddenElement');
+//     li.classList.toggle('fadeIn');
+//     bodyNoScroll.classList.toggle('noScroll');
+//   }
+//     searchAndSocialContainer.classList.toggle('searchOffcanvasShow');
+//   // li.classList.toggle('fadeIn');
+// });
 
 searchIcon.addEventListener('click', (e)=>{
   if (mobile) {
