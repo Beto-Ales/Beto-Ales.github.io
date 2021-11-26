@@ -110,6 +110,7 @@ dropdownItem.addEventListener('click', ()=>{
     searchIcon.classList.toggle('searchIconRotate');
     baristaLogo.classList.toggle('hiddenElement');
     burgerMenu.classList.toggle('hiddenElement');
+    li.classList.toggle('fadeIn');
     bodyNoScroll.classList.toggle('noScroll');
   }
     searchAndSocialContainer.classList.toggle('searchOffcanvasShow');
