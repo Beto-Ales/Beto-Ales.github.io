@@ -40,7 +40,7 @@ a:hover{
 
 
 .posts .btn{
-    width: 6.41em;
+    width: 6.5em;
 }
 
 
@@ -324,18 +324,25 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 /* burger menu */
 
 .menu-wrap{    
-    display: flex;
+    /* display: flex;*/
     align-items: center;
-    justify-content: center;
+    /*justify-content: center;
     position: relative;
     margin-left: 1em;
+    cursor: pointer; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* position: relative; */
+    margin-left: 1em;
+    /* height: 0em; */
     cursor: pointer;
 }
 
 .toggler{
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    top: -1em;
+    top: -1em; */
     height: 2em;
     width: 2em;
     cursor: pointer;
@@ -345,24 +352,24 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
 .lineOne{
     position: absolute;
-    left: 0;
-    top: -0.5em;
+    /* left: 0; */
+    top: 1.3em;    
     height: 0.2em;
     width: 2em;
     background-color: white;
     transform: rotate(0deg);
-    transition: top 0.5s, transform 0.5s;
+    transition: top 0.5s , transform 0.5s;
 }
 
 .lineTwo{
     position: absolute;
-    left: 0;
-    top: 0.5em;
+    /* left: 0;*/
+    bottom: 1.3em;
     height: 0.2em;
     width: 2em;
     background-color: white;
     transform: rotate(0deg);
-    transition: top 0.5s, transform 0.5s;
+    transition: top 0.5s , transform 0.5s;
 }
 
 /* effect */
@@ -378,12 +385,12 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
 .lineOneRotate{
     transform: rotate(45deg);
-    top: 0;
+    top: unset;
 }
 
 .linetwoRotate{
     transform: rotate(-45deg);
-    top: 0;
+    bottom: unset;
 }
 
 
@@ -556,12 +563,12 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
     .menu-wrap{
         display: flex !important;
-        position: relative;
+        /* position: relative; */
     }
 
-    .menu-wrap *{
+    /* .menu-wrap *{
         position: absolute;
-    }
+    } */
 
     .modal-dialog{
         margin: 0;
