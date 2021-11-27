@@ -1,3 +1,5 @@
+// image slider
+
 var myCarousel = document.querySelector('.carousel');
 var phrase = document.querySelector('.phrase');
 const phrases = ['“To create an environment in which knowledge about coffee and its sphere can be obtained”',
@@ -11,8 +13,9 @@ myCarousel.addEventListener('slide.bs.carousel', function () {
   ++count;  
 });
 
-// pagination
 
+
+// pagination
 
 const currentPage = document.querySelector('.currentPage');
 const totalPagesElement = document.querySelector('.totalPages');
@@ -42,13 +45,13 @@ if (! btnPrevious.hasAttribute('href')) {
 }
 
 
-// search
+
+// search articles
 
 
 function postSearch(elementId){
   
-  const searchInput = document.querySelector(elementId);
-  // console.log(elementId);
+  const searchInput = document.querySelector(elementId);  
 
   let filter = searchInput.value.toUpperCase();  
 
@@ -67,13 +70,14 @@ function postSearch(elementId){
   });
 }
 
-// -----------------------------------------------------------------
 
-// ofcanvas search, social & links
+
+// ofcanvas search, social & links >> mobile devices <<
 
 const searchIcon = document.querySelector('.fa-search');
 const baristaLogo = document.querySelector('.baristaLogo');
 
+// anchor container of the search icon and the input
 const iconPlusInput = document.querySelector('#iconPlusInput');
 
 const burgerMenu = document.querySelector('.burgerMenu');
@@ -94,32 +98,13 @@ const searchSpan = document.querySelector('.searchSpan');
 // check device
 let mobile;
 
-
 const searchAndSocialContainer = document.querySelector('.searchList');
-
-// const li = document.querySelectorAll('#dropdownMenu li');
-// const liB = searchAndSocialContainer.childNodes;
 
 const li = document.querySelector('.fadeOut');
 
-// const dropdownItem = document.querySelector('.gotoArticle');
-
-// dropdownItem.addEventListener('click', ()=>{
-//   if (mobile) {
-//     console.log(mobile);
-//     searchIcon.classList.toggle('searchIconRotate');
-//     baristaLogo.classList.toggle('hiddenElement');
-//     burgerMenu.classList.toggle('hiddenElement');
-//     li.classList.toggle('fadeIn');
-//     bodyNoScroll.classList.toggle('noScroll');
-//   }
-//     searchAndSocialContainer.classList.toggle('searchOffcanvasShow');
-//   // li.classList.toggle('fadeIn');
-// });
 
 searchIcon.addEventListener('click', (e)=>{
-  if (mobile) {
-    console.log(mobile);
+  if (mobile) {    
     e.currentTarget.classList.toggle('searchIconRotate');
     baristaLogo.classList.toggle('hiddenElement');
     burgerMenu.classList.toggle('hiddenElement');
@@ -156,16 +141,10 @@ toggler.addEventListener('click', ()=>{
 // .removeAttribute("class");             example
 
 
-function myFunction(x) {
+function checkDevice(x) {
   if (x.matches) { // If media query matches
 
-    mobile = true;
-    console.log(mobile);
-
-    // search icon    
-    // searchIcon.setAttribute("data-bs-toggle", "offcanvas");
-    // searchIcon.setAttribute("data-bs-target", "#offcanvasRight"); // atencion con el id que no se repita en search & social
-    // searchIcon.setAttribute("aria-controls", "offcanvasRight");
+    mobile = true;    
 
     // search & social
     searchAndSocialContainer.removeAttribute("class");
@@ -177,52 +156,21 @@ function myFunction(x) {
     // move the links and social media icons to special container #linkSocialContainer
     linkSocialContainer.appendChild(links);
     linkSocialContainer.appendChild(headerSocial);
-
-
     
+  } else {    
 
-
-    // searchAndSocialContainer.setAttribute("tabindex", "-1");
-    // searchAndSocialContainer.setAttribute("id", "offcanvasRight");
-    // searchAndSocialContainer.setAttribute("aria-labelledby", "offcanvasRightLabel");
-
-    // burger menu btn
-    // burgerMenu.setAttribute("data-bs-toggle", "offcanvas");
-    // burgerMenu.setAttribute("data-bs-target", "#offcanvasRightLinks"); // atencion con el id que no se repita en search & social
-    // burgerMenu.setAttribute("aria-controls", "offcanvasRight");
-
-    // links container
-    // document.body.style.backgroundColor = "yellow";
-    // linksContainer.setAttribute("class", "offcanvas offcanvas-end");
-    // linksContainer.setAttribute("tabindex", "-1");
-    // linksContainer.setAttribute("id", "offcanvasRightLinks");
-    // linksContainer.setAttribute("aria-labelledby", "offcanvasRightLabel");
-  } else {
-    // document.body.style.backgroundColor = "pink";
-
-    mobile = false;
-    console.log(mobile);
-
-    // search icon    
-    // searchIcon.removeAttribute("data-bs-toggle");
-    // searchIcon.removeAttribute("data-bs-target"); // atencion con el id que no se repita en search & social
-    // searchIcon.removeAttribute("aria-controls");
-    // searchIcon.setAttribute("class", "fas fa-search");
+    mobile = false;    
 
     // search & social
     searchAndSocialContainer.removeAttribute("class");
-    searchAndSocialContainer.setAttribute("class", "searchList dropdown-menu");
-    // searchAndSocialContainer.setAttribute("id", "dropdownMenu");
-    searchAndSocialContainer.removeAttribute("tabindex");
-    // searchAndSocialContainer.removeAttribute("id");
+    searchAndSocialContainer.setAttribute("class", "searchList dropdown-menu");    
+    searchAndSocialContainer.removeAttribute("tabindex");    
     searchAndSocialContainer.setAttribute("aria-labelledby", "dropdownMenu");
 
     searchSpan.style.display = "none";
 
     searchPlusMedia.appendChild(headerSocial);
     rightSide.appendChild(links);
-
-
 
     
     // remove search classes 
@@ -243,18 +191,10 @@ function myFunction(x) {
     searchIcon.classList.remove('searchIconDisable');
 
     iconPlusInput.classList.remove('show');
-    iconPlusInput.setAttribute("aria-expanded", "false");
-
-
-    // links container    
-    // linksContainer.removeAttribute("class");
-    // linksContainer.setAttribute("class", "nav justify-content-end");
-    // linksContainer.removeAttribute("tabindex");
-    // linksContainer.removeAttribute("id");
-    // linksContainer.removeAttribute("aria-labelledby");
+    iconPlusInput.setAttribute("aria-expanded", "false");    
   }
 }
 
 var x = window.matchMedia("(max-width: 610px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+checkDevice(x) // Call listener function at run time
+x.addListener(checkDevice) // Attach listener function on state changes

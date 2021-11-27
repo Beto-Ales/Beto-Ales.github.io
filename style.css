@@ -22,6 +22,8 @@ input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   }
 
 
+
+
 /* remove blue underline from <a> */
 a{
     color: initial;
@@ -32,17 +34,16 @@ a:hover{
 }
 
 
+
+
 /* rectangle buttons */
 .btn{
     border-radius: 0;    
 }
 
-
-
 .posts .btn{
     width: 6.5em;
 }
-
 
 /* grey paragraph */
 .pGrey{
@@ -50,9 +51,7 @@ a:hover{
     margin-bottom: 0.15rem;
 }
 
-/* .slideFooterWidth{           remove
-    width: 85%;
-} */
+
 
 
 /* header navigation bar container */
@@ -65,6 +64,9 @@ a:hover{
     top: -2em;
     width: 85%;
 }
+
+
+
 
 /* elements in the nav bar right side when desktop */
 .rightSide{
@@ -81,6 +83,10 @@ a:hover{
     padding: 0;    
 }
 
+
+
+
+
 /* the list of articles */
 .dropdown-menu{
     top: 60% !important;
@@ -88,8 +94,7 @@ a:hover{
     margin-top: 0 !important;
     width: 18.4em !important;
     border-top: 1px solid #707070 !important;
-    border-radius: 0;
-    /* color: white; remove */
+    border-radius: 0; 
     background-color: black;
     height: 22.5em;    
 }
@@ -102,6 +107,9 @@ a:hover{
     color: #707070;
     margin: 0;
 }
+
+
+
 
 
 /* search icon */
@@ -124,6 +132,9 @@ input{
     position: relative;
     top: 0.5em;    
 }
+
+
+
 
 
 /* underline effect when hoover links */
@@ -152,10 +163,6 @@ input{
 
 
 
-/* .slideSection{
-    margin-bottom: -5.5em;      remove
-} */
-
 
 /* section container of carousel, posts, pagination & sidebar */
 .grid{
@@ -164,11 +171,8 @@ input{
     grid-template-columns: repeat(12, 1fr);
 }
 
-
-
 .carousel{
-    top: -5.5em;
-    /* width: 85%; */
+    top: -5.5em; 
     grid-column: 1/13;
 }
 
@@ -323,26 +327,14 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
 /* burger menu */
 
-.menu-wrap{    
-    /* display: flex;*/
-    align-items: center;
-    /*justify-content: center;
-    position: relative;
-    margin-left: 1em;
-    cursor: pointer; */
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* position: relative; */
-    margin-left: 1em;
-    /* height: 0em; */
+.menu-wrap{        
+    align-items: center;    
+    display: flex;    
+    margin-left: 1em;    
     cursor: pointer;
 }
 
-.toggler{
-    /* position: absolute;
-    left: 0;
-    top: -1em; */
+.toggler{    
     height: 2em;
     width: 2em;
     cursor: pointer;
@@ -351,8 +343,7 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 }
 
 .lineOne{
-    position: absolute;
-    /* left: 0; */
+    position: absolute;    
     top: 1.3em;    
     height: 0.2em;
     width: 2em;
@@ -362,8 +353,7 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 }
 
 .lineTwo{
-    position: absolute;
-    /* left: 0;*/
+    position: absolute;    
     bottom: 1.3em;
     height: 0.2em;
     width: 2em;
@@ -371,17 +361,6 @@ footer .border-bottom, .dropdown-menu .border-bottom {
     transform: rotate(0deg);
     transition: top 0.5s , transform 0.5s;
 }
-
-/* effect */
-/* .toggler:checked ~ .lineOne{         remove
-    transform: rotate(45deg);
-    top: 0;
-}
-
-.toggler:checked ~ .lineTwo{
-    transform: rotate(-45deg);
-    top: 0;
-} */
 
 .lineOneRotate{
     transform: rotate(45deg);
@@ -394,15 +373,6 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 }
 
 
-/* .offcanvas{
-    width: 100%;
-    background-color: black;            remove
-    list-style-type: none;
-}
-
-.offcanvas li{
-    width: 80%;
-} */
 
 
 /* tablet */
@@ -421,8 +391,7 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
     /* header navbar elements center */
     .baristaLogo, .rightSide, .rightSide *{
-        margin: auto;
-        /* position: initial; check this                        remove */        
+        margin: auto;        
     }
 
     .rightSide{
@@ -479,13 +448,7 @@ footer .border-bottom, .dropdown-menu .border-bottom {
         display: none;
     }
 
-    /* #linkSocialContainer{
-        visibility: hidden;
-        position: absolute;
-        width: 0;        
-        top: 0;
-        right: 0;
-    } */
+    
 
     /* search icon effect */
     .searchIcon{
@@ -562,13 +525,8 @@ footer .border-bottom, .dropdown-menu .border-bottom {
     }
 
     .menu-wrap{
-        display: flex !important;
-        /* position: relative; */
-    }
-
-    /* .menu-wrap *{
-        position: absolute;
-    } */
+        display: flex !important;        
+    }    
 
     .modal-dialog{
         margin: 0;
