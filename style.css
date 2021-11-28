@@ -525,7 +525,8 @@ footer .border-bottom, .dropdown-menu .border-bottom {
     }
 
     .menu-wrap{
-        display: flex !important;        
+        display: flex !important;
+        height: 4em;
     }    
 
     .modal-dialog{
