@@ -327,14 +327,15 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
 /* burger menu */
 
-.menu-wrap{        
+.menu-wrap{
+    display: flex !important;
+    height: 3.6em;
+    position: relative;
     align-items: center;    
-    display: flex;    
-    margin-left: 1em;    
-    cursor: pointer;
+    display: flex;
 }
 
-.toggler{    
+.toggler{
     height: 2em;
     width: 2em;
     cursor: pointer;
@@ -348,8 +349,8 @@ footer .border-bottom, .dropdown-menu .border-bottom {
     height: 0.2em;
     width: 2em;
     background-color: white;
-    transform: rotate(0deg);
-    transition: top 0.5s , transform 0.5s;
+    transform: rotate(0deg);    
+    transition: all 0.5s;
 }
 
 .lineTwo{
@@ -358,18 +359,20 @@ footer .border-bottom, .dropdown-menu .border-bottom {
     height: 0.2em;
     width: 2em;
     background-color: white;
-    transform: rotate(0deg);
-    transition: top 0.5s , transform 0.5s;
+    transform: rotate(0deg);    
+    transition: all 0.5s;
 }
 
 .lineOneRotate{
     transform: rotate(45deg);
-    top: unset;
+    transform-origin: left;
+    top: 1em;
 }
 
 .linetwoRotate{
     transform: rotate(-45deg);
-    bottom: unset;
+    transform-origin: left;
+    bottom: 1em;
 }
 
 
@@ -434,6 +437,11 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
     .navbarContainer{
         flex-direction: row;
+        align-items: center;
+    }
+
+    .baristaLogo{
+        padding: 0;
     }
 
     .baristaLogo img{
@@ -522,11 +530,6 @@ footer .border-bottom, .dropdown-menu .border-bottom {
         visibility: visible;
         width: 100vw;
         height: 100vh;
-    }
-
-    .menu-wrap{
-        display: flex !important;
-        height: 4em;
     }    
 
     .modal-dialog{
