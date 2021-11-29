@@ -112,8 +112,7 @@ searchIcon.addEventListener('click', (e)=>{
     li.classList.toggle('fadeIn');
   }
   
-  searchAndSocialContainer.classList.toggle('searchOffcanvasShow');  
-  // li.classList.toggle('fadeIn');  
+  searchAndSocialContainer.classList.toggle('searchOffcanvasShow');    
 });
 
 // burger function
@@ -124,23 +123,12 @@ toggler.addEventListener('click', ()=>{
   headerSocial.classList.toggle('headerSocialShow');
   bodyNoScroll.classList.toggle('noScroll');
 
-  searchIcon.classList.toggle('searchIconDisable');
-  // linkSocialContainer.appendChild(links);
-  // linkSocialContainer.appendChild(headerSocial);
+  searchIcon.classList.toggle('searchIconDisable');  
 });
 
 
 
-// let burgerMenu = document.querySelector('.burgerMenu');
-// let linksContainer = document.querySelector('.nav');
-
-
-
-// .setAttribute("type", "button");       example
-
-// .removeAttribute("class");             example
-
-
+// apply actions considering media queries
 function checkDevice(x) {
   if (x.matches) { // If media query matches
 
