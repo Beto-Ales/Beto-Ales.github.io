@@ -396,9 +396,9 @@ footer .border-bottom, .dropdown-menu .border-bottom {
         margin: auto;        
     }
 
-    .rightSide{
+    /* .rightSide{
         position: inherit;
-    }
+    } */
     .baristaLogo{
         padding-top: 1em;
     }
@@ -445,6 +445,10 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
     .baristaLogo img{
         width: 90%;
+    }
+
+    .rightSide{
+        top: 0;
     }
 
     form.border-bottom{
