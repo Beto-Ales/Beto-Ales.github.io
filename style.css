@@ -327,8 +327,7 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
 /* burger menu */
 
-.menu-wrap{
-    display: flex !important;
+.menu-wrap{    
     height: 3.6em;
     position: relative;
     align-items: center;    
@@ -483,6 +482,12 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
     .noScroll{
         overflow: hidden;
+    }
+
+
+    /* burger menu */
+    .menu-wrap{
+        display: flex !important;
     }
 
     .nav, .headerSocial{
