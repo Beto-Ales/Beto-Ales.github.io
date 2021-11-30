@@ -328,10 +328,10 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 /* burger menu */
 
 .menu-wrap{    
-    height: 3.6em;
+    height: 2em;
     position: relative;
-    align-items: center;    
-    display: flex;
+    align-items: flex-start;    
+    /* display: flex; */
 }
 
 .toggler{
@@ -344,34 +344,34 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
 .lineOne{
     position: absolute;    
-    top: 1.3em;    
+    top: 0.3em;    
     height: 0.2em;
     width: 2em;
     background-color: white;
     transform: rotate(0deg);    
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .lineTwo{
     position: absolute;    
-    bottom: 1.3em;
+    top: 1.3em;
     height: 0.2em;
     width: 2em;
     background-color: white;
     transform: rotate(0deg);    
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .lineOneRotate{
     transform: rotate(45deg);
     transform-origin: left;
-    top: 1em;
+    top: 0.2em;
 }
 
 .linetwoRotate{
     transform: rotate(-45deg);
     transform-origin: left;
-    bottom: 1em;
+    top: 1.6em;
 }
 
 
@@ -397,7 +397,7 @@ footer .border-bottom, .dropdown-menu .border-bottom {
     }
 
     .rightSide{
-        position: static;
+        position: inherit;
     }
     .baristaLogo{
         padding-top: 1em;
@@ -436,7 +436,7 @@ footer .border-bottom, .dropdown-menu .border-bottom {
 
     .navbarContainer{
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .baristaLogo{
@@ -462,7 +462,7 @@ footer .border-bottom, .dropdown-menu .border-bottom {
         transform: rotate(0);        
         font-size: 1.5em;
         cursor: pointer;
-        transition: all 0.5s;
+        transition: all 0.2s;
     }
 
     .searchIconRotate{
