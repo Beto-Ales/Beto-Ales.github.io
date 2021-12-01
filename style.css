@@ -395,6 +395,10 @@ footer .border-bottom, .dropdown-menu .border-bottom {
     .baristaLogo, .rightSide, .rightSide *{
         margin: auto;        
     }
+
+    .rightSide{
+        top: 0;
+    }
     
     .baristaLogo{
         padding-top: 1em;
